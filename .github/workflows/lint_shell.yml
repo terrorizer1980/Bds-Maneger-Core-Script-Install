@@ -1,0 +1,16 @@
+name: Test Shell Install
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+
+jobs:
+  sudo:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Run Shell with sudo
+      run: sudo ./tools/install.sh --no-interactive
