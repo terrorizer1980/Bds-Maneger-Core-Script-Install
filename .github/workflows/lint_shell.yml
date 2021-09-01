@@ -13,6 +13,4 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Run Shell with sudo
-      env:
-        INSTALL_TYPE: local
-      run: sudo ./tools/install.sh --no-interactive
+      run: sudo INSTALL_TYPE=local ./tools/install.sh --no-interactive
